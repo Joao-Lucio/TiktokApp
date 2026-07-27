@@ -3,33 +3,17 @@ import {
   Text,
   StyleSheet,
   Pressable,
-  Dimensions,
   View,
   TouchableOpacity,
   Platform,
 } from 'react-native';
 import Video, { ResizeMode } from 'react-native-video';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-const { height: heightScreen } = Dimensions.get('window');
-
+import { FeedProps } from '../../models/Feed';
+import { heightScreen } from '../../utils/screenSize';
 interface FeedItemProps {
-  data: {
-    id: string;
-    url: string;
-    name: string;
-    description: string;
-    likes: number;
-    comments: number;
-  };
-  currentVisibleItem?: {
-    id: string;
-    url: string;
-    name: string;
-    description: string;
-    likes: number;
-    comments: number;
-  };
+  data: FeedProps;
+  currentVisibleItem?: FeedProps;
 }
 
 export function FeedItem({ data, currentVisibleItem }: FeedItemProps) {
