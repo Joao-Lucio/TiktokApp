@@ -3,7 +3,7 @@ import React from 'react';
 import { FeedActions } from '../../../src/screens/home/components/FeedActions';
 import { render, textContents } from '../../../test-utils/render';
 
-test('FeedActions renders likes, comments and bookmarks', () => {
+test('FeedActions renders counters and the bookmark action', () => {
   const renderer = render(
     <FeedActions
       likes={1200}
@@ -17,7 +17,8 @@ test('FeedActions renders likes, comments and bookmarks', () => {
     ['1.2k', '25'].includes(String(value)),
   );
 
-  expect(values).toEqual(['1.2k', '25', '25']);
+  expect(values).toEqual(['1.2k', '25']);
+  expect(renderer.root.findByProps({ children: 'bookmark' })).toBeDefined();
 });
 
 test('FeedActions delegates the like action', () => {

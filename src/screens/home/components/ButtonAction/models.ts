@@ -1,6 +1,6 @@
 export interface ButtonActionProps {
   iconName: string;
-  number: number;
+  number?: number;
   isSelected?: boolean;
   onPress?: () => void;
 }

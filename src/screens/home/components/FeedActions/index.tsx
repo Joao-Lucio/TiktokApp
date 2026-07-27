@@ -18,7 +18,7 @@ export const FeedActions = ({
         isSelected={liked}
       />
       <ButtonAction iconName="chatbubble-ellipses" number={comments} />
-      <ButtonAction iconName="bookmark" number={comments} />
+      <ButtonAction iconName="bookmark" />
     </View>
   );
 };
