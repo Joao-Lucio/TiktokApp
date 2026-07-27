@@ -6,7 +6,8 @@ import { Inbox } from '../screens/inbox';
 import { NewFeed } from '../screens/newFeed';
 import { Profile } from '../screens/profile';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { ButtonNew } from '../components/BottomNew';
+import { colors } from '../theme';
+import { ButtonNew } from './components/BottomNew';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,10 +18,10 @@ export function AppRoutes() {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: '#000',
+          backgroundColor: colors.background,
           borderTopWidth: 0,
         },
-        tabBarActiveTintColor: '#fff',
+        tabBarActiveTintColor: colors.foreground,
       }}
     >
       <Tab.Screen

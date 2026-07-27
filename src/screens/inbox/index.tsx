@@ -1,17 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
 
 export function Inbox() {
   return (
-    <View style={styles.container}>
+    <View className={styles.container}>
       <Text>Inbox</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
